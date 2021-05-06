@@ -1,0 +1,59 @@
+
+        div.container div {
+            grid-area: section;
+        }
+
+        div.container_show {
+            margin: 0 10%;
+            margin-top: 50px;
+            min-height: 100px;
+            display: grid;
+            grid-template-areas:
+                "section header header header header header header"
+                "blank footer footer footer footer footer footer";
+            grid-gap: 10px;
+        }
+
+        h1,
+        h2 {
+            margin-top: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            grid-area: header;
+        }
+
+        table th,
+        table td,
+        div.container_show div {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid silver;
+        }
+
+        footer {
+            grid-area: footer;
+            padding: 10px;
+        }
+
+        footer * {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        footer h1.shipping_status {
+            padding: 5px;
+            background-color: black;
+            color: white;
+        }
+
+        footer div.receipt {
+            float: right;
+        }
+
+        footer div.receipt * {
+            display: block;
+            font-size: 15px;
+        }

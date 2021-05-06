@@ -1,0 +1,85 @@
+        form {
+            margin: 0 10%;
+            margin-top: 30px;
+        }
+
+        form input[type=search],
+        button,
+        input[type=submit] {
+            width: 50%;
+            height: 40px;
+            border: 1px solid black;
+            border-width: thin;
+            font-size: 20px;
+            vertical-align: top;
+        }
+
+        button,
+        input[type=submit] {
+            width: 180px;
+            border: none;
+            background-color: black;
+            color: white;
+        }
+
+        #add_product {
+            float: right;
+        }
+
+        div {
+            margin: 0 10%;
+        }
+
+        div img {
+            width: 100%;
+        }
+
+        table {
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        table td.picture {
+            padding: 10px;
+            width: 100px;
+        }
+
+        table th,
+        table td {
+            text-align: left;
+            padding: 20px;
+            outline: 1px solid silver;
+            border-collapse: collapse;
+        }
+
+        table td button {
+            font-size: 15px;
+            padding: 5px;
+            width: 80px;
+            margin-left: 5px;
+        }
+
+        table td.navigation {
+            text-align: center;
+        }
+
+        footer {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        footer a {
+            display: inline-block;
+            color: black;
+            padding: 5px;
+            text-decoration: none;
+            outline: 1px solid black;
+        }
+
+        footer a:focus {
+            outline: 1px solid black;
+        }
+
+        section div.product_list {
+            display: none;
+        }

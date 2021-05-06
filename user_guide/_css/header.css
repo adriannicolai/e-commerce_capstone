@@ -1,0 +1,66 @@
+        body * {
+            font-family: 'Josefin Sans', sans-serif;
+            margin: 0px;
+            font-weight: bold;
+        }
+
+        :focus {
+            outline: none;
+        }
+
+        a:hover {
+            background-color: white;
+            color: black;
+            cursor: pointer;
+        }
+        a.cart:hover{
+            background-color: transparent;
+            color: transparent;
+        }
+        body {
+            margin: 0;
+        }
+
+body header {
+    color: white;
+    display: flex;
+    align-content: space-between;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 10%;
+    background-color: black;
+    position: sticky;
+    position: -webkit-sticky; /* for safari */
+    top: 0;
+    z-index: 1;
+}
+        header h1 {
+            margin: 20px 10px;
+        }
+        header h1 a{
+            text-decoration: none;
+            color: white;
+            padding: 5px;
+        }
+
+        header div.box {
+            position: relative;
+            color: white;
+            margin-left: auto;
+        }
+
+        div.box p {
+            position: absolute;
+            color: white;
+            font-weight: bolder;
+            right: -6px;
+            bottom: -7px;
+        }
+
+        div.box img:hover,
+        div.card {
+            cursor: pointer;
+        }
+

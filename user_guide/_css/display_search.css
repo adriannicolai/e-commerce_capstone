@@ -1,0 +1,72 @@
+  form {
+            margin: 0 10%;
+            display: flex;
+            margin-top: 20px;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        form input[type=search] {
+            width: 50%;
+            height: 40px;
+            border: 1px solid black;
+            border-width: thin;
+            font-size: 20px;
+        }
+
+        section {
+            margin: 0 10%;
+            padding-top: 10px;
+            display: grid;
+            grid-template-columns: auto;
+            grid-gap: 10px;
+            grid-auto-columns: 50px;
+        }
+
+        section div.product_list {
+            margin: 0 10%;
+            padding-top: 10px;
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            grid-gap: 10px;
+            grid-auto-columns: 50px;
+        }
+
+        section div.card {
+            padding: 5px;
+            font-size: 10px;
+            text-align: center;
+            position: relative;
+            width: 18%;
+            display: inline-block;
+        }
+
+        section div.card p.price {
+            text-align: right;
+        }
+
+        div.card:hover {
+            top: -15px;
+            background-color: silver;
+        }
+
+        footer {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        footer a {
+            display: inline-block;
+            color: black;
+            padding: 5px;
+            text-decoration: none;
+            outline: 1px solid black;
+        }
+
+        footer a:focus {
+            outline: 1px solid black;
+        }
+
+        section div.product_list {
+            display: none;
+        }

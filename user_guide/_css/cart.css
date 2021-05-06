@@ -1,0 +1,85 @@
+        div.page_container {
+            padding: 0 10%;
+            padding-top: 20px;
+        }
+
+        body * {
+            box-sizing: border-box;
+            /* outline: 1px solid red; */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid silver;
+        }
+
+        table th {
+            padding: 20px;
+            text-align: left;
+            border: 1px solid silver;
+        }
+
+        table td {
+            padding: 20px;
+            border: 1px solid silver;
+        }
+
+
+        table td.quantity {
+            width: 15%;
+        }
+
+        section {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            grid-gap: 20px;
+        }
+
+        section div {
+            padding: 10px;
+            outline: 1px solid silver;
+        }
+
+        section label,
+        section input {
+            display: block;
+            margin: 10px 0;
+            width: 100%;
+        }
+
+        section input[type=text] {
+            height: 25px;
+            border: 1px solid silver;
+        }
+
+        td img {
+            position: relative;
+            top: 2px;
+            margin-left: 10px;
+        }
+
+        input[type=submit] {
+            width: 70px;
+            padding: 12px;
+            border: none;
+            background-color: black;
+            color: white;
+        }
+
+        div.checkbox_location {
+            display: block;
+            font-size: 15px;
+            position: relative;
+            top: -10px;
+        }
+
+        input[type=checkbox] {
+            display: inline;
+            width: 12px;
+        }
+
+        div.checkbox_location * {
+            display: inline;
+        }

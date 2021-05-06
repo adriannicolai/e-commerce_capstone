@@ -1,0 +1,48 @@
+
+        nav,
+        form {
+            margin: 0 10%;
+            display: flex;
+        }
+
+        nav div.card {
+            width: 90px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        div.card p {
+            color: black;
+        }
+
+        nav div.card img {
+            width: 100%;
+        }
+
+        form {
+            margin-top: 20px;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        form input[type=search] {
+            width: 50%;
+            height: 40px;
+            border: 1px solid black;
+            border-width: thin;
+            font-size: 20px;
+        }
+
+        section {
+            margin: 0 10%;
+            height: 200px;
+            width: 80%;
+        }
+
+        section img.sale {
+            width: 100%;
+        }
+
+        div.products {
+            display: inline-block;
+        }
