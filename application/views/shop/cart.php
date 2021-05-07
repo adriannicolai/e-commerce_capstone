@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Display Item</title>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="<?= base_url('/user_guide/_css/header.css')?>">
+    <link rel="stylesheet" href="<?= base_url('/user_guide/_css/header.css'); ?>">
     <link rel="stylesheet" href="<?= base_url('/user_guide/_css/cart.css') ?>">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
@@ -38,13 +38,13 @@
                 <tr>
                     <td>Red Dragon Yama</td>
                     <td>$19.99</td>
-                    <td class="quantity">1 <a href="#"><img src="../images/edit.png" alt="" height="20" width="20"></a><a href="#"><img src="../images/delete_trash.png" alt="" height="20" width="20"></a></td>
+                    <td class="quantity">1 <a href="#"><img src="<?= base_url('/user_guide/_images/edit.png'); ?>" alt="" height="20" width="20"></a><a href="#"><img src="<?= base_url('/user_guide/_images/delete_trash.png') ?>" alt="" height="20" width="20"></a></td>
                     <td>$19.99</td>
                 </tr>
                 <tr>
                     <td>Red Dragon Yama</td>
                     <td>$19.99</td>
-                    <td class="quantity">1 <a href="#"><img src="../images/edit.png" alt="" height="20" width="20"></a><a href="#"><img src="../images/delete_trash.png" alt="" height="20" width="20"></a></td>
+                    <td class="quantity">1 <a href="#"><img src="<?= base_url('/user_guide/_images/edit.png'); ?>" alt="" height="20" width="20"></a><a href="#"><img src="<?= base_url('/user_guide/_images/delete_trash.png') ?>" alt="" height="20" width="20"></a></td>
                     <td>$19.99</td>
                 </tr>
             </tbody>

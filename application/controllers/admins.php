@@ -19,5 +19,10 @@ class admins extends CI_Controller
     {
         $this->load->view('/admin/products');
     }
+    public function show($id)
+    {
+        $clean_id['id'] = $this->security->xss_clean($id);
+        $this->load->view('/admin/show', $clean_id);
+    }
 }
 ?>

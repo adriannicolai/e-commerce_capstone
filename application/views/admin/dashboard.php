@@ -47,7 +47,7 @@
             </thead>
             <tbody class="results" id="1">
                 <tr>
-                    <td><a href="show.php?id=1">100</a></td>
+                    <td><a href="/admins/show/1">100</a></td>
                     <td>Bob</td>
                     <td><?= date('M j Y H:i:s'); ?></td>
                     <td>Sa puso mo</td>
@@ -62,7 +62,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><a href="show.php?id=2">100</a></td>
+                    <td><a href="/admins/show/1">100</a></td>
                     <td>Bob</td>
                     <td><?= date('M j Y H:i:s'); ?></td>
                     <td>Sa puso mo</td>
@@ -77,7 +77,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><a href="show.php?id=3">100</a></td>
+                    <td><a href="/admins/show/1">100</a></td>
                     <td>Bob</td>
                     <td><?= date('M j Y H:i:s'); ?></td>
                     <td>Sa puso mo</td>
@@ -92,7 +92,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><a href="show.php?id=4">100</a></td>
+                    <td><a href="/admins/show/1">100</a></td>
                     <td>Bob</td>
                     <td><?= date('M j Y H:i:s'); ?></td>
                     <td>Sa puso mo</td>
@@ -107,7 +107,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><a href="show.php?id=5">100</a></td>
+                    <td><a href="/admins/show/1">100</a></td>
                     <td>Bob</td>
                     <td><?= date('M j Y H:i:s'); ?></td>
                     <td>Sa puso mo</td>
@@ -122,7 +122,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><a href="show.php?id=5">100</a></td>
+                    <td><a href="/admins/show/1">100</a></td>
                     <td>Bob</td>
                     <td><?= date('M j Y H:i:s'); ?></td>
                     <td>Sa puso mo</td>
@@ -137,7 +137,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><a href="show.php?id=6">100</a></td>
+                    <td><a href="/admins/show/1">100</a></td>
                     <td>Bob</td>
                     <td><?= date('M j Y H:i:s'); ?></td>
                     <td>Sa puso mo</td>
@@ -152,7 +152,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><a href="show.php?id=">100</a></td>
+                    <td><a href="/admins/show/1">100</a></td>
                     <td>Bob</td>
                     <td><?= date('M j Y H:i:s'); ?></td>
                     <td>Sa puso mo</td>
@@ -167,7 +167,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><a href="show.php?id=7">100</a></td>
+                    <td><a href="/admins/show/1">100</a></td>
                     <td>Bob</td>
                     <td><?= date('M j Y H:i:s'); ?></td>
                     <td>Sa puso mo</td>
@@ -184,7 +184,7 @@
             </tbody>
             <tbody class="results" id="2">
                 <tr>
-                    <td><a href="show.php?id=7">100</a></td>
+                    <td><a href="/admins/show/1">100</a></td>
                     <td>Bob</td>
                     <td><?= date('M j Y H:i:s'); ?></td>
                     <td>Sa puso mo</td>
@@ -199,7 +199,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><a href="show.php?id=8">100</a></td>
+                    <td><a href="/admins/show/1">100</a></td>
                     <td>Bob</td>
                     <td><?= date('M j Y H:i:s'); ?></td>
                     <td>Sa puso mo</td>
@@ -214,7 +214,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><a href="show.php?id=9">100</a></td>
+                    <td><a href="/admins/show/1">100</a></td>
                     <td>Bob</td>
                     <td><?= date('M j Y H:i:s'); ?></td>
                     <td>Sa puso mo</td>
@@ -229,7 +229,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><a href="show.php?id=0">100</a></td>
+                    <td><a href="/admins/show/1">100</a></td>
                     <td>Bob</td>
                     <td><?= date('M j Y H:i:s'); ?></td>
                     <td>Sa puso mo</td>
@@ -244,7 +244,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><a href="show.php?id=10">100</a></td>
+                    <td><a href="/admins/show/1">100</a></td>
                     <td>Bob</td>
                     <td><?= date('M j Y H:i:s'); ?></td>
                     <td>Sa puso mo</td>
@@ -259,7 +259,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><a href="show.php?id=11">100</a></td>
+                    <td><a href="/admins/show/1">100</a></td>
                     <td>Bob</td>
                     <td><?= date('M j Y H:i:s'); ?></td>
                     <td>Sa puso mo</td>
@@ -274,7 +274,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><a href="show.php?id=12">100</a></td>
+                    <td><a href="/admins/show/1">100</a></td>
                     <td>Bob</td>
                     <td><?= date('M j Y H:i:s'); ?></td>
                     <td>Sa puso mo</td>
@@ -289,7 +289,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><a href="show.php?id=13">100</a></td>
+                    <td><a href="/admins/show/1">100</a></td>
                     <td>Bob</td>
                     <td><?= date('M j Y H:i:s'); ?></td>
                     <td>Sa puso mo</td>
@@ -304,7 +304,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><a href="show.php?id=14">100</a></td>
+                    <td><a href="/admins/show/1">100</a></td>
                     <td>Bob</td>
                     <td><?= date('M j Y H:i:s'); ?></td>
                     <td>Sa puso mo</td>
