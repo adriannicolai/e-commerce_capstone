@@ -1,4 +1,3 @@
-<?= print_r($search_results); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,14 +12,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('#1').show();
             $(document).on('click', 'a', function() {
                 var id = $(this).attr('page_number');
-                $('.product_list').hide();
                 $('#' + id).show();
             });
             $(document).on('click', '.card', function() {
                 window.location = '/shops/show_selected_product/' + $(this).attr('product_id');
+            });
+            $(document).on('submit', 'form', function() {
+                $.post($(this).attr('action'), $(this).serialize(), function(res) {
+                    $('section').html(res)
+                });
+                return false;
             });
         });
     </script>
@@ -28,36 +31,22 @@
 
 <body>
     <?php include('partials/header.php'); ?>
-    <form action="display_search.php" method="post">
+    <form action="/shops/search_product" method="post">
         <input type="search" name="search">
         <input type="image" src="<?= base_url('/user_guide/_images/search.png'); ?>" height="40" width="40">
     </form>
     <section>
-<?php   foreach($search_results as $search_result){?>
-        <div class="product_list" id="1"> 
-            <div class="card" product_id="1">
-                <img src="<?= base_url('/user_guide/_images/reddragon_yama.jpeg') ?>" alt="" height=150 width=150>
-                <p class="price">$19.00</p>
-                <p>Wow magic</p>
+        <?php foreach ($search_results as $search_result) { ?>
+            <div class="product_list">
+                <div class="card" product_id="<?= $search_result['id'] ?>">
+                    <img src="<?= base_url('/user_guide/_images/' . $search_result['image']) ?>" alt="" height=150 width=150>
+                    <p class="price">$<?= $search_result['price'] ?> </p>
+                    <p><?= $search_result['name'] ?></p>
+                </div>
             </div>
-        </div>
-<?php        }?>
-          
+        <?php } ?>
+
     </section>
-    <footer>
-        <a href="#">Previous</a>
-        <a href="#" page_number="1">1</a>
-        <a href="#" page_number="2">2</a>
-        <a href="#" page_number="3">3</a>
-        <a href="#" page_number="4">4</a>
-        <a href="#" page_number="5">5</a>
-        <a href="#" page_number="6">6</a>
-        <a href="#" page_number="7">7</a>
-        <a href="#" page_number="8">8</a>
-        <a href="#" page_number="9">9</a>
-        <a href="#" page_number="10">10</a>
-        <a href="#">Next</a>
-    </footer>
 </body>
 
 </html>

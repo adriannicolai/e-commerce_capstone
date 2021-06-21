@@ -22,7 +22,6 @@
         });
         $(document).on('click', 'button', function() {
             var quantity = parseInt($('input[name=quantity]').val());
-            // quantity.parseInt();
             if ($(this).text() == '+') {
                 quantity++;
             } else if ($(this).text() == '-' && quantity != 1) {
@@ -31,50 +30,42 @@
             $('input[name=quantity]').val(quantity);
             return false;
         });
-
         $(document).on('keyup', '#quantity', function() {
             var added_item = $(this).val();
             if (!$.isNumeric(added_item)) {
                 $('#quantity').val(1);
             }
-        })
+        });
+        var product_info = <?= json_encode($product_info[0]) ?>;
+        $.post('/shops/get_similar_items', { category_id: product_info.category_id, product_id: product_info.id }, function(res){
+            $('footer').html(res);
+        });
     });
 </script>
 
 <body>
     <?php include('partials/header.php'); ?>
     <div class="page_container">
-        <aside>
-            <img src="<?= base_url('/user_guide/_images/cart.png'); ?>" class="main">
-            <img src="<?= base_url('/user_guide/_images/laptop.png'); ?>" class="sub">
-            <img src="<?= base_url('/user_guide/_images/mouse.png'); ?>" class="sub">
-            <img src="<?= base_url('/user_guide/_images/dress.png'); ?>" class="sub">
-            <img src="<?= base_url('/user_guide/_images/heels.png'); ?>" class="sub">
-            <img src="<?= base_url('/user_guide/_images/computers.png'); ?>" class="sub">
-        </aside>
-        <section>
-            <h1>Red Dragon Yama K550 purple switch mechanical keyboard</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pulvinar, enim sit amet malesuada sagittis, elit odio feugiat dolor, non cursus nibh nulla at erat. Fusce finibus et sapien eget sagittis. Morbi hendrerit commodo libero, ac lobortis velit scelerisque non. Cras iaculis quis velit quis aliquam. Mauris vel nulla lacus. Phasellus risus velit, faucibus ac ipsum quis, euismod ornare sapien. Nulla eu sapien lectus. Aenean consequat tellus eu dolor fringilla, lacinia accumsan felis venenatis. Donec hendrerit arcu mi, in aliquet odio placerat vitae. Donec lorem nulla, suscipit eu lacinia sed, commodo a tortor. Sed semper orci velit, id condimentum dolor consectetur eget. Cras vehicula ante massa, quis consectetur enim blandit eu. Proin pellentesque molestie libero, nec mollis tellus. Vestibulum aliquam neque sem.</p>
-            <form action="">
-                <button>-</button>
-                <input type="text" name="quantity" value="1" id="quantity">
-                <button>+</button>
-                <input type="submit" value="Buy Now">
+        <?php foreach ($product_info as $product_infos) { ?>
+            <aside>
+                <img src="<?= base_url('/user_guide/_images/' . $product_infos['image']); ?>" class="main">
+            </aside>
+            <section>
+                <h1><?= $product_infos['name'] ?></h1>
+                <p><?= $product_infos['description'] ?></p>
+                <form action="">
+                    <button>-</button>
+                    <input type="text" name="quantity" value="1" id="quantity">
+                    <button>+</button>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </section>
+            <form action="get_similar_items" method="post" id="categories_form">
+                <input type="hidden" name="category" value="<?= $product_infos['category_id'] ?>">
             </form>
-        </section>
+        <?php } ?>
         <h1>Similar Items</h1>
-        <footer>
-            <img src="<?= base_url('/user_guide/_images/reddragon_mitra.jfif'); ?>" class="recommendation" product_id="2">
-            <img src="<?= base_url('/user_guide/_images/reddragon_mitra.jfif'); ?>" class="recommendation" product_id="2">
-            <img src="<?= base_url('/user_guide/_images/reddragon_mitra.jfif'); ?>" class="recommendation" product_id="2">
-            <img src="<?= base_url('/user_guide/_images/reddragon_mitra.jfif'); ?>" class="recommendation" product_id="2">
-            <img src="<?= base_url('/user_guide/_images/reddragon_mitra.jfif'); ?>" class="recommendation" product_id="2">
-            <img src="<?= base_url('/user_guide/_images/reddragon_mitra.jfif'); ?>" class="recommendation" product_id="2">
-            <img src="<?= base_url('/user_guide/_images/reddragon_mitra.jfif'); ?>" class="recommendation" product_id="2">
-            <img src="<?= base_url('/user_guide/_images/reddragon_mitra.jfif'); ?>" class="recommendation" product_id="2">
-            <img src="<?= base_url('/user_guide/_images/reddragon_mitra.jfif'); ?>" class="recommendation" product_id="2">
-            <img src="<?= base_url('/user_guide/_images/reddragon_mitra.jfif'); ?>" class="recommendation" product_id="2">
-        </footer>
+        <footer></footer>
     </div>
 
 </body>

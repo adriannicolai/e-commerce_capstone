@@ -18,7 +18,7 @@
             margin: 0 10%;
             padding-top: 10px;
             display: grid;
-            grid-template-columns: auto;
+            grid-template-columns: auto auto auto auto;
             grid-gap: 10px;
             grid-auto-columns: 50px;
         }
@@ -37,7 +37,7 @@
             font-size: 10px;
             text-align: center;
             position: relative;
-            width: 18%;
+            width: 100%;
             display: inline-block;
         }
 
@@ -65,8 +65,4 @@
 
         footer a:focus {
             outline: 1px solid black;
-        }
-
-        section div.product_list {
-            display: none;
         }
