@@ -16,54 +16,17 @@
             $(document).on('click', '.card', function() {
                 // window.location='/show.php?id='+$(this).attr('category_id');
             });
+            $.get('/shops/fetch_categories', function(categories) {
+                $('nav').html(categories);
+            });
         });
     </script>
 </head>
 
 <body>
     <?php $this->load->view('/shop/partials/header'); ?>
-    <nav>
-        <div class="card" category_id="1">
-            <img src="<?= base_url('/user_guide/_images/computers.png'); ?>" alt="" height="70" width="70">
-            <p>Computers</p>
-        </div>
-        <div class="card" category_id="2">
-            <img src="<?= base_url('/user_guide/_images/laptop.png'); ?>" alt="" height="70" width="70">
-            <p>Laptops</p>
-        </div>
-        <div class="card" category_id="3">
-            <img src="<?= base_url('/user_guide/_images/mouse.png'); ?>" alt="" height="70" width="70">
-            <p>Mouse</p>
-        </div>
-        <div class="card" category_id="4">
-            <img src="<?= base_url('/user_guide/_images/printer.png'); ?>" alt="" height="70" width="70">
-            <p>Printers</p>
-        </div>
-        <div class="card" category_id="5">
-            <img src="<?= base_url('/user_guide/_images/dress.png'); ?>" alt="" height="70" width="70">
-            <p>Dresses</p>
-        </div>
-        <div class="card" category_id="6">
-            <img src="<?= base_url('/user_guide/_images/shirt.png'); ?>" alt="" height="70" width="70">
-            <p>Shirt</p>
-        </div>
-        <div class="card" category_id="7">
-            <img src="<?= base_url('/user_guide/_images/short.png'); ?>" alt="" height="70" width="70">
-            <p>Shorts</p>
-        </div>
-        <div class="card" category_id="8">
-            <img src="<?= base_url('/user_guide/_images/shoes.png'); ?>" alt="" height="70" width="70">
-            <p>Shoes</p>
-        </div>
-        <div class="card" category_id="9">
-            <img src="<?= base_url('/user_guide/_images/heels.png'); ?>" alt="" height="70" width="70">
-            <p>Heels</p>
-        </div>
-        <div class="card" category_id="10">
-            <img src="<?= base_url('/user_guide/_images/necklace.png'); ?>" alt="" height="70" width="70">
-            <p>Jewelry</p>
-        </div>
-    </nav>
+    <nav></nav>
+    <!-- this form is exempted from csrf protection because refreshing the reult page will have an error -->
     <form action="/shops/get_search" method="post">
         <input type="search" name="search">
         <input type="hidden" name="<?= $this->security->get_csrf_token_name(); ?>" value="<?= $this->security->get_csrf_hash(); ?>">
@@ -71,8 +34,5 @@
     </form>
     <section>
         <img src="<?= base_url('/user_guide/_images/sale.jfif'); ?>" alt="" class="sale">
-        <div class="section-product">
-            <h1>sdsad</h1>
-        </div>
     </section>
 </body>

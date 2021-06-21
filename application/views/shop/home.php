@@ -1,3 +1,4 @@
+<?= print_r($search_results); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,210 +33,16 @@
         <input type="image" src="<?= base_url('/user_guide/_images/search.png'); ?>" height="40" width="40">
     </form>
     <section>
-        <div class="product_list" id="1">
-            <div class="card" product_id="1">
-                <img src="<?= base_url('/user_guide/_images/reddragon_yama.jpeg') ?>" alt="" height=150 width=150>
-                <p class="price">$19.00</p>
-                <p>Wow magic</p>
-            </div>
-            <div class="card" product_id="1">
-                <img src="<?= base_url('/user_guide/_images/reddragon_yama.jpeg') ?>" alt="" height=150 width=150>
-                <p class="price">$19.00</p>
-                <p>Wow magic</p>
-            </div>
-            <div class="card" product_id="1">
-                <img src="<?= base_url('/user_guide/_images/reddragon_yama.jpeg') ?>" alt="" height=150 width=150>
-                <p class="price">$19.00</p>
-                <p>Wow magic</p>
-            </div>
-            <div class="card" product_id="1">
-                <img src="<?= base_url('/user_guide/_images/reddragon_yama.jpeg') ?>" alt="" height=150 width=150>
-                <p class="price">$19.00</p>
-                <p>Wow magic</p>
-            </div>
-            <div class="card" product_id="1">
-                <img src="<?= base_url('/user_guide/_images/reddragon_yama.jpeg') ?>" alt="" height=150 width=150>
-                <p class="price">$19.00</p>
-                <p>Wow magic</p>
-            </div>
-            <div class="card" product_id="1">
-                <img src="<?= base_url('/user_guide/_images/reddragon_yama.jpeg') ?>" alt="" height=150 width=150>
-                <p class="price">$19.00</p>
-                <p>Wow magic</p>
-            </div>
-            <div class="card" product_id="1">
-                <img src="<?= base_url('/user_guide/_images/reddragon_yama.jpeg') ?>" alt="" height=150 width=150>
-                <p class="price">$19.00</p>
-                <p>Wow magic</p>
-            </div>
-            <div class="card" product_id="1">
-                <img src="<?= base_url('/user_guide/_images/reddragon_yama.jpeg') ?>" alt="" height=150 width=150>
-                <p class="price">$19.00</p>
-                <p>Wow magic</p>
-            </div>
-            <div class="card" product_id="1">
-                <img src="<?= base_url('/user_guide/_images/reddragon_yama.jpeg') ?>" alt="" height=150 width=150>
-                <p class="price">$19.00</p>
-                <p>Wow magic</p>
-            </div>
-            <div class="card" product_id="1">
-                <img src="<?= base_url('/user_guide/_images/reddragon_yama.jpeg') ?>" alt="" height=150 width=150>
-                <p class="price">$19.00</p>
-                <p>Wow magic</p>
-            </div>
-            <div class="card" product_id="1">
-                <img src="<?= base_url('/user_guide/_images/reddragon_yama.jpeg') ?>" alt="" height=150 width=150>
-                <p class="price">$19.00</p>
-                <p>Wow magic</p>
-            </div>
-            <div class="card" product_id="1">
-                <img src="<?= base_url('/user_guide/_images/reddragon_yama.jpeg') ?>" alt="" height=150 width=150>
-                <p class="price">$19.00</p>
-                <p>Wow magic</p>
-            </div>
-            <div class="card" product_id="1">
-                <img src="<?= base_url('/user_guide/_images/reddragon_yama.jpeg') ?>" alt="" height=150 width=150>
-                <p class="price">$19.00</p>
-                <p>Wow magic</p>
-            </div>
-            <div class="card" product_id="1">
-                <img src="<?= base_url('/user_guide/_images/reddragon_yama.jpeg') ?>" alt="" height=150 width=150>
-                <p class="price">$19.00</p>
-                <p>Wow magic</p>
-            </div>
-            <div class="card" product_id="1">
-                <img src="<?= base_url('/user_guide/_images/reddragon_yama.jpeg') ?>" alt="" height=150 width=150>
-                <p class="price">$19.00</p>
-                <p>Wow magic</p>
-            </div>
-            <div class="card" product_id="1">
-                <img src="<?= base_url('/user_guide/_images/reddragon_yama.jpeg') ?>" alt="" height=150 width=150>
-                <p class="price">$19.00</p>
-                <p>Wow magic</p>
-            </div>
-            <div class="card" product_id="1">
-                <img src="<?= base_url('/user_guide/_images/reddragon_yama.jpeg') ?>" alt="" height=150 width=150>
-                <p class="price">$19.00</p>
-                <p>Wow magic</p>
-            </div>
-            <div class="card" product_id="1">
-                <img src="<?= base_url('/user_guide/_images/reddragon_yama.jpeg') ?>" alt="" height=150 width=150>
-                <p class="price">$19.00</p>
-                <p>Wow magic</p>
-            </div>
-            <div class="card" product_id="1">
-                <img src="<?= base_url('/user_guide/_images/reddragon_yama.jpeg') ?>" alt="" height=150 width=150>
-                <p class="price">$19.00</p>
-                <p>Wow magic</p>
-            </div>
+<?php   foreach($search_results as $search_result){?>
+        <div class="product_list" id="1"> 
             <div class="card" product_id="1">
                 <img src="<?= base_url('/user_guide/_images/reddragon_yama.jpeg') ?>" alt="" height=150 width=150>
                 <p class="price">$19.00</p>
                 <p>Wow magic</p>
             </div>
         </div>
-        <div id="2" class="product_list">
-            <div class="card" product_id="39">
-                <img src="<?= base_url('/user_guide/_images/reddragon_mitra.jfif') ?>" alt="" height=150 width=150>
-                <p class="price">$19.00</p>
-                <p>Wow magic</p>
-            </div>
-            <div class="card" product_id="39">
-                <img src="<?= base_url('/user_guide/_images/reddragon_mitra.jfif') ?>" alt="" height=150 width=150>
-                <p class="price">$19.00</p>
-                <p>Wow magic</p>
-            </div>
-            <div class="card" product_id="39">
-                <img src="<?= base_url('/user_guide/_images/reddragon_mitra.jfif') ?>" alt="" height=150 width=150>
-                <p class="price">$19.00</p>
-                <p>Wow magic</p>
-            </div>
-            <div class="card" product_id="39">
-                <img src="<?= base_url('/user_guide/_images/reddragon_mitra.jfif') ?>" alt="" height=150 width=150>
-                <p class="price">$19.00</p>
-                <p>Wow magic</p>
-            </div>
-            <div class="card" product_id="39">
-                <img src="<?= base_url('/user_guide/_images/reddragon_mitra.jfif') ?>" alt="" height=150 width=150>
-                <p class="price">$19.00</p>
-                <p>Wow magic</p>
-            </div>
-            <div class="card" product_id="39">
-                <img src="<?= base_url('/user_guide/_images/reddragon_mitra.jfif') ?>" alt="" height=150 width=150>
-                <p class="price">$19.00</p>
-                <p>Wow magic</p>
-            </div>
-            <div class="card" product_id="39">
-                <img src="<?= base_url('/user_guide/_images/reddragon_mitra.jfif') ?>" alt="" height=150 width=150>
-                <p class="price">$19.00</p>
-                <p>Wow magic</p>
-            </div>
-            <div class="card" product_id="39">
-                <img src="<?= base_url('/user_guide/_images/reddragon_mitra.jfif') ?>" alt="" height=150 width=150>
-                <p class="price">$19.00</p>
-                <p>Wow magic</p>
-            </div>
-            <div class="card" product_id="39">
-                <img src="<?= base_url('/user_guide/_images/reddragon_mitra.jfif') ?>" alt="" height=150 width=150>
-                <p class="price">$19.00</p>
-                <p>Wow magic</p>
-            </div>
-            <div class="card" product_id="39">
-                <img src="<?= base_url('/user_guide/_images/reddragon_mitra.jfif') ?>" alt="" height=150 width=150>
-                <p class="price">$19.00</p>
-                <p>Wow magic</p>
-            </div>
-            <div class="card" product_id="39">
-                <img src="<?= base_url('/user_guide/_images/reddragon_mitra.jfif') ?>" alt="" height=150 width=150>
-                <p class="price">$19.00</p>
-                <p>Wow magic</p>
-            </div>
-            <div class="card" product_id="39">
-                <img src="<?= base_url('/user_guide/_images/reddragon_mitra.jfif') ?>" alt="" height=150 width=150>
-                <p class="price">$19.00</p>
-                <p>Wow magic</p>
-            </div>
-            <div class="card" product_id="39">
-                <img src="<?= base_url('/user_guide/_images/reddragon_mitra.jfif') ?>" alt="" height=150 width=150>
-                <p class="price">$19.00</p>
-                <p>Wow magic</p>
-            </div>
-            <div class="card" product_id="39">
-                <img src="<?= base_url('/user_guide/_images/reddragon_mitra.jfif') ?>" alt="" height=150 width=150>
-                <p class="price">$19.00</p>
-                <p>Wow magic</p>
-            </div>
-            <div class="card" product_id="39">
-                <img src="<?= base_url('/user_guide/_images/reddragon_mitra.jfif') ?>" alt="" height=150 width=150>
-                <p class="price">$19.00</p>
-                <p>Wow magic</p>
-            </div>
-            <div class="card" product_id="39">
-                <img src="<?= base_url('/user_guide/_images/reddragon_mitra.jfif') ?>" alt="" height=150 width=150>
-                <p class="price">$19.00</p>
-                <p>Wow magic</p>
-            </div>
-            <div class="card" product_id="39">
-                <img src="<?= base_url('/user_guide/_images/reddragon_mitra.jfif') ?>" alt="" height=150 width=150>
-                <p class="price">$19.00</p>
-                <p>Wow magic</p>
-            </div>
-            <div class="card" product_id="39">
-                <img src="<?= base_url('/user_guide/_images/reddragon_mitra.jfif') ?>" alt="" height=150 width=150>
-                <p class="price">$19.00</p>
-                <p>Wow magic</p>
-            </div>
-            <div class="card" product_id="39">
-                <img src="<?= base_url('/user_guide/_images/reddragon_mitra.jfif') ?>" alt="" height=150 width=150>
-                <p class="price">$19.00</p>
-                <p>Wow magic</p>
-            </div>
-            <div class="card" product_id="39">
-                <img src="<?= base_url('/user_guide/_images/reddragon_mitra.jfif') ?>" alt="" height=150 width=150>
-                <p class="price">$19.00</p>
-                <p>Wow magic</p>
-            </div>
-        </div>
+<?php        }?>
+          
     </section>
     <footer>
         <a href="#">Previous</a>

@@ -9,11 +9,8 @@ class shops extends CI_Controller
     }
     public function get_search()
     {
-        redirect('/shops/show_search_result');
-    }
-    public function show_search_result()
-    {
-        $this->load->view('/shop/home');
+        $search_results['search_results'] = $this->shop->get_search($this->input->post(NULL, TRUE));
+        $this->load->view('/shop/home', $search_results);
     }
     public function show_selected_product($id)
     {
@@ -23,6 +20,11 @@ class shops extends CI_Controller
     public function show_cart()
     {
         $this->load->view('/shop/cart');
+    }
+    public function fetch_categories()
+    {
+        $categories['categories'] = $this->shop->fetch_categories();
+        $this->load->view('/shop/partials/category_list', $categories);
     }
 }
 ?>
