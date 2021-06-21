@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.23, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.25, for Win64 (x86_64)
 --
 -- Host: localhost    Database: e-commerce_v2
 -- ------------------------------------------------------
--- Server version	8.0.23
+-- Server version	8.0.25
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -32,7 +32,7 @@ CREATE TABLE `carts` (
   PRIMARY KEY (`id`),
   KEY `fk_product_id_idx` (`product_id`),
   CONSTRAINT `fk_product_id` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -58,7 +58,7 @@ CREATE TABLE `categories` (
   `created_at` datetime DEFAULT CURRENT_TIMESTAMP,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -67,7 +67,7 @@ CREATE TABLE `categories` (
 
 LOCK TABLES `categories` WRITE;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
-INSERT INTO `categories` VALUES (1,'Computers','2021-05-02 08:53:34',NULL),(2,'Laptops','2021-05-02 08:54:02',NULL),(3,'Mouse','2021-05-02 08:54:02',NULL),(4,'Printers','2021-05-02 08:54:02',NULL),(5,'Dresses','2021-05-02 08:54:02',NULL),(6,'Shirt','2021-05-02 08:54:02',NULL),(7,'Shorts','2021-05-07 14:04:52',NULL),(8,'Shoes','2021-05-07 14:04:52',NULL),(9,'Heels','2021-05-07 14:04:52',NULL),(10,'Jewelry','2021-05-07 14:04:52',NULL);
+INSERT INTO `categories` VALUES (1,'Computers','2021-05-02 08:53:34',NULL),(2,'Laptops','2021-05-02 08:54:02',NULL),(3,'Mouse','2021-05-02 08:54:02',NULL),(4,'Printers','2021-05-02 08:54:02',NULL),(5,'Dresses','2021-05-02 08:54:02',NULL),(6,'Shirt','2021-05-02 08:54:02',NULL),(7,'Shorts','2021-05-07 14:04:52',NULL),(8,'Shoes','2021-05-07 14:04:52',NULL),(9,'Heels','2021-05-07 14:04:52',NULL),(10,'Jewelry','2021-05-07 14:04:52',NULL),(11,'Keyboards','2021-06-21 18:54:43',NULL),(12,'Monitors','2021-06-21 18:54:43',NULL);
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -83,7 +83,7 @@ CREATE TABLE `category_images` (
   `category_id` int NOT NULL,
   `image_url` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -113,7 +113,7 @@ CREATE TABLE `images` (
   PRIMARY KEY (`id`),
   KEY `fk_images_products1_idx` (`product_id`),
   CONSTRAINT `fk_images_products1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -122,7 +122,7 @@ CREATE TABLE `images` (
 
 LOCK TABLES `images` WRITE;
 /*!40000 ALTER TABLE `images` DISABLE KEYS */;
-INSERT INTO `images` VALUES (1,1,'keyboard.jpeg',1,'2021-05-02 13:22:14',NULL),(2,2,'reddragon_mitra.jfif',1,'2021-05-02 13:24:27',NULL),(3,3,'samsung_oddysey_g9.jpg',1,'2021-05-02 13:25:53',NULL),(4,4,'xiaomi_monitpr.jfif',1,'2021-05-02 13:26:20',NULL),(5,5,'ygt_monitor.jfif',1,'2021-05-02 13:27:33',NULL),(6,1,'search.png',0,'2021-05-02 14:30:09',NULL);
+INSERT INTO `images` VALUES (1,1,'reddragon_yama.jpeg',1,'2021-05-02 13:22:14',NULL),(2,2,'reddragon_mitra.jfif',1,'2021-05-02 13:24:27',NULL),(3,3,'samsungg9.jpg',1,'2021-05-02 13:25:53',NULL),(4,4,'xiaomi_monitor.jpg',1,'2021-05-02 13:26:20',NULL),(5,5,'ygt_monitor.jpg',1,'2021-05-02 13:27:33',NULL);
 /*!40000 ALTER TABLE `images` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -142,7 +142,7 @@ CREATE TABLE `order_statuses` (
   PRIMARY KEY (`id`),
   KEY `fk_order_statuses_orders1_idx` (`order_id`),
   CONSTRAINT `fk_order_statuses_orders1` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -171,7 +171,7 @@ CREATE TABLE `ordered_products` (
   KEY `fk_ordered_products_orders1_idx` (`order_id`),
   CONSTRAINT `fk_ordered_products_orders1` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`),
   CONSTRAINT `fk_ordered_products_products1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -195,7 +195,7 @@ CREATE TABLE `orders` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -225,7 +225,7 @@ CREATE TABLE `products` (
   PRIMARY KEY (`id`),
   KEY `fk_products_categories_idx` (`category_id`),
   CONSTRAINT `fk_products_categories` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -234,7 +234,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,1,'Red Dragon Yama K550',30,'The Redragon YAMA K550 isn\'t your average gaming keyboard. Not only is it over-engineered and built to take a beating but its also loaded with features including laser engraved keys, gaming switches with Redragon\'s mechanical ultra-last springs, crisp and bright LED backlighting.','2021-05-02 10:01:45',NULL),(2,1,'Red Dragon Mitra',15,'GAMING KEYBOARD; 104 Key Mechanical Gaming Keyboard with Custom Mechanical Switches designed for longevity with greater durability and responsiveness. Fast mechanical keys with medium resistance, precise actuation, audible click sound, and tactile bump feedback.','2021-05-02 10:01:45',NULL),(3,1,'Samsung Odyssey g9',1479.99,'The Odyssey G9 is a 49-inch, 5,120-by-1,440-pixel QLED monitor with a 32:9 aspect ratio. It features a 1000R curve that\'s quite pronounced for its size, effectively encompassing your field of view when you\'re sitting comfortably in front of it.','2021-05-02 10:01:45',NULL),(4,1,'Xiaomi 34\" monitor',400,'standard 16:9 monitors. Especially in real-time strategy and first-person shooter games, The high 144 Hz refresh rate and 4 ms response time effectively reduce stutter and ghosting in games','2021-05-02 10:05:58',NULL),(5,1,'YGT 24\" Curved Monitor',100,'The YGT 24″ IPS monitor is the ultimate budget PC monitor. This IPS monitor runs at full HD – perfect for photo editors as well as videographers who are on a tight budget. The 75Hz refresh rate, although not ideal for gaming – is still above average for a budget-friendly IPS device','2021-05-02 10:07:21',NULL);
+INSERT INTO `products` VALUES (1,11,'Red Dragon Yama K550',30,'The Redragon YAMA K550 isn\'t your average gaming keyboard. Not only is it over-engineered and built to take a beating but its also loaded with features including laser engraved keys, gaming switches with Redragon\'s mechanical ultra-last springs, crisp and bright LED backlighting.','2021-05-02 10:01:45',NULL),(2,11,'Red Dragon Mitra',15,'GAMING KEYBOARD; 104 Key Mechanical Gaming Keyboard with Custom Mechanical Switches designed for longevity with greater durability and responsiveness. Fast mechanical keys with medium resistance, precise actuation, audible click sound, and tactile bump feedback.','2021-05-02 10:01:45',NULL),(3,12,'Samsung Odyssey g9',1479.99,'The Odyssey G9 is a 49-inch, 5,120-by-1,440-pixel QLED monitor with a 32:9 aspect ratio. It features a 1000R curve that\'s quite pronounced for its size, effectively encompassing your field of view when you\'re sitting comfortably in front of it.','2021-05-02 10:01:45',NULL),(4,12,'Xiaomi 34\" monitor',400,'standard 16:9 monitors. Especially in real-time strategy and first-person shooter games, The high 144 Hz refresh rate and 4 ms response time effectively reduce stutter and ghosting in games','2021-05-02 10:05:58',NULL),(5,12,'YGT 24\" Curved Monitor',100,'The YGT 24″ IPS monitor is the ultimate budget PC monitor. This IPS monitor runs at full HD – perfect for photo editors as well as videographers who are on a tight budget. The 75Hz refresh rate, although not ideal for gaming – is still above average for a budget-friendly IPS device','2021-05-02 10:07:21',NULL);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -259,7 +259,7 @@ CREATE TABLE `shipping_details` (
   PRIMARY KEY (`id`),
   KEY `fk_shipping_details_orders1_idx` (`order_id`),
   CONSTRAINT `fk_shipping_details_orders1` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -285,7 +285,7 @@ CREATE TABLE `users` (
   `created_at` datetime DEFAULT CURRENT_TIMESTAMP,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -306,4 +306,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-06-21 11:43:34
+-- Dump completed on 2021-06-21 20:43:42
